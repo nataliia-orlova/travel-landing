@@ -1,0 +1,139 @@
+.testimonials {
+	&__block {
+		margin-bottom: 200px;
+	}
+	&__heading {
+		text-align: center;
+		margin-bottom: 62px;
+		font: $font-h2-bold;
+		&--italic {
+			font: $font-h2-italic;
+		}
+	}
+	&__text {
+		font-family: Prompt;
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 34px;
+		letter-spacing: 0em;
+		text-align: left;
+	}
+	&__name {
+		font-family: Prompt;
+		font-size: 26px;
+		font-weight: 700;
+		line-height: 39px;
+		letter-spacing: 0em;
+		text-align: left;
+
+		&--description {
+			font: $body-S;
+		}
+	}
+
+	&__block {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__quote {
+		flex-basis: 50%;
+		display: flex;
+		gap: 10%;
+	}
+
+	&__quote-img {
+		height: 39.68540573120132px;
+		width: 56.25161743164084px;
+	}
+	&__quote-text {
+		padding-top: 32px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__arrow--right {
+		height: 40px;
+		width: 40px;
+		margin-left: 8px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	&__arrow--left {
+		height: 40px;
+		width: 40px;
+		margin-right: 8px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	&__preview {
+		position: relative;
+		background-color: $secondary-color;
+		width: 528px;
+		height: 298px;
+		border-radius: 10px;
+		align-self: flex-end;
+		&-heading {
+			text-transform: uppercase;
+			font-family: Prompt;
+			font-size: 27px;
+			font-weight: 700;
+			line-height: 31px;
+			letter-spacing: 0em;
+			text-align: left;
+			color: $white-100;
+		}
+		&-description {
+			font-family: Prompt;
+			font-size: 18px;
+			font-style: italic;
+			font-weight: 300;
+			line-height: 21px;
+			letter-spacing: 0em;
+			text-align: left;
+			color: $white-100;
+		}
+		&-name {
+			font-family: Prompt;
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 28px;
+			letter-spacing: 0em;
+			text-align: left;
+			color: $white-100;
+		}
+	}
+	&__preview--details {
+		display: flex;
+		justify-content: space-between;
+		padding-left: 32px;
+		padding-top: 32px;
+		padding-right: 42px;
+		padding-bottom: 32px;
+	}
+	&__preview--text {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__preview-description {
+		position: relative;
+		bottom: 32px;
+	}
+
+	&__play {
+		position: absolute;
+		top: 44%;
+		left: 44%;
+		z-index: 1;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	&__img {
+		width: 100%;
+	}
+}

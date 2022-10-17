@@ -1,0 +1,85 @@
+.hero {
+	padding-top: 72px;
+	padding-bottom: 120px;
+
+	&__img1 {
+		width: 155px;
+		height: 150px;
+		border-radius: 12px;
+	}
+
+	&__heading {
+		font: $font-h1-bold;
+		text-transform: uppercase;
+		color: $dark-500;
+
+		&--itallic {
+			font: $font-h1-italic;
+			text-transform: none;
+		}
+
+		&--colored {
+			color: $primary-color;
+		}
+	}
+
+	&__img2 {
+		width: 205px;
+		height: 317px;
+	}
+	&__cta {
+		display: flex;
+		padding-left: 64px;
+		align-items: flex-end;
+		gap: 10rem;
+	}
+	&__usp {
+		margin: 0;
+		color: $dark-500;
+		font: $body-S-bold-italic;
+	}
+}
+/* GRID */
+.hero__content {
+	display: grid;
+
+	grid-template-rows: auto;
+	grid-template-columns: 155px auto 205px;
+	grid-template-areas:
+		"img1 first-line first-line"
+		". second-line img2"
+		". third-line img2"
+		". cta-block img2";
+}
+
+.first-line {
+	grid-area: first-line;
+	align-self: end;
+	justify-self: end;
+	margin-right: 56px;
+}
+
+.second-line {
+	grid-area: second-line;
+	align-self: end;
+}
+
+.third-line {
+	grid-area: third-line;
+	align-self: end;
+	justify-self: end;
+	margin-right: 56px;
+}
+.hero__img1 {
+	grid-area: img1;
+}
+
+.hero__img2 {
+	grid-area: img2;
+	align-self: end;
+}
+
+.hero__cta {
+	grid-area: cta-block;
+	height: 144px;
+}

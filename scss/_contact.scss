@@ -1,0 +1,129 @@
+.contact {
+	margin-bottom: 140px;
+
+	&__block {
+		display: flex;
+		align-items: center;
+	}
+
+	&__img {
+		width: 100%;
+		min-width: 310px;
+	}
+
+	&__heading {
+		margin-bottom: 60px;
+		font: $font-h2-bold;
+
+		&--italic {
+			font: $font-h2-italic;
+			color: $white-100;
+		}
+	}
+
+	&__form {
+		background-color: $primary-color;
+		border-radius: 20px;
+		flex-basis: 40%;
+		padding: 60px;
+	}
+
+	label {
+		color: $white-100;
+		font-family: Prompt;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 14px;
+		letter-spacing: 0em;
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	input {
+		margin-bottom: 40px;
+	}
+
+	&__terms {
+		padding-top: 32px;
+		padding-bottom: 30px;
+		font-family: Prompt;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 14px;
+		letter-spacing: 0em;
+		text-align: left;
+
+		&--link {
+			color: $dark-500;
+			text-decoration: underline;
+		}
+	}
+
+	::placeholder {
+		font-family: Prompt;
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 18px;
+		letter-spacing: 0em;
+		text-align: left;
+		color: #9c5f20;
+	}
+
+	input,
+	textarea {
+		font-family: Prompt;
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 18px;
+		letter-spacing: 0em;
+		text-align: left;
+		color: $dark-500;
+
+		overflow: hidden;
+		width: 100%;
+		background: transparent;
+		border-top: 0;
+		border-right: 0;
+		border-left: 0;
+		border-bottom: 1px solid #393738;
+		padding-bottom: 8px;
+		outline: none;
+	}
+
+	&__cta-button {
+		background: transparent;
+		border: none;
+
+		&::before {
+			content: ' ';
+			position: absolute;
+			z-index: 1;
+			left: 0;
+			background-color: #f7f7f7;
+			width: 47.5px;
+			height: 47.5px;
+			border-radius: 50%;
+		}
+	}
+
+	&__cta-link {
+		z-index: 2;
+	}
+
+	@media (max-width: 992px) {
+		.container {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		&__block {
+			flex-direction: column-reverse;
+		}
+
+		&__form {
+			width: 100vw;
+			border-radius: 0;
+			margin-bottom: 140px;
+		}
+	}
+}

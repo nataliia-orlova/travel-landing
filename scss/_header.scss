@@ -1,0 +1,50 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 40px;
+	margin-bottom: 32px;
+
+	&__nav-list {
+		display: flex;
+		justify-content: space-evenly;
+		gap: 3.75rem;
+
+		li {
+			flex-shrink: 0;
+		}
+
+		a {
+			display: inline-block;
+
+			font: $body-S;
+			color: $dark-500;
+		}
+	}
+
+	&__button-block {
+		display: flex;
+
+		gap: 1rem;
+	}
+	&__button {
+		font: $button-S;
+		color: $dark-500;
+		background-color: transparent;
+		width: 136px;
+		height: 40px;
+		border-radius: 1000px;
+		border: 2px solid $primary-color;
+		cursor: pointer;
+		&:hover {
+			background-color: $primary-color;
+		}
+
+		&--filled {
+			background-color: $primary-color;
+			&:hover {
+				background-color: transparent;
+			}
+		}
+	}
+}

@@ -1,0 +1,63 @@
+.about-us {
+	background-color: $secondary-color;
+	position: relative;
+	z-index: 1;
+
+	&__heading {
+		color: $white-100;
+		margin: 0;
+		padding-top: 80px;
+		word-spacing: 1rem;
+	}
+
+	&__heading--bold {
+		font: $font-h2-bold;
+	}
+
+	&__heading--italic {
+		font: $font-h2-italic;
+	}
+
+	/* GRID */
+	&__text {
+		color: $white-100;
+		font: $body-S;
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-areas:
+			'first-column-first-paragraph second-column-first-paragraph third-column'
+			'first-column-second-paragraph second-column-second-paragraph third-column'
+			'. . third-column';
+	}
+	&__first-column--first-paragraph {
+		grid-area: first-column-first-paragraph;
+		padding-top: 80px;
+		padding-right: 64px;
+	}
+	&__first-column--second-paragraph {
+		grid-area: first-column-second-paragraph;
+		padding-top: 24px;
+		padding-right: 64px;
+	}
+	&__second-column--first-paragraph {
+		grid-area: second-column-first-paragraph;
+		padding-top: 80px;
+	}
+	&__second-column--second-paragraph {
+		grid-area: second-column-second-paragraph;
+		padding-top: 24px;
+	}
+
+	&__img {
+		grid-area: third-column;
+	}
+	&__cta-button {
+		grid-area: second-column-second-paragraph;
+		align-self: end;
+	}
+
+	/* GRID */
+	.cta-link {
+		color: $white-100;
+	}
+}

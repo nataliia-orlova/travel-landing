@@ -1,0 +1,140 @@
+.offer {
+	margin-bottom: 200px;
+	/* GRID */
+	&__text {
+		font: $font-h5-medium;
+		padding-top: 26px;
+	}
+	&__block-top {
+		margin-top: 140px;
+		margin-bottom: 180px;
+		display: grid;
+
+		column-gap: 5%;
+
+		grid-template-columns: auto;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-areas:
+			'heading button  service-1 service-4'
+			'img img service-2 service-5'
+			'img img service-3 .';
+	}
+	&__sub-heading--top {
+		grid-area: heading;
+	}
+	&__cta-button {
+		grid-area: button;
+		position: relative;
+		top: 25px;
+	}
+	&__img--top {
+		grid-area: img;
+		width: 100%;
+		height: auto;
+	}
+	&__service--1 {
+		grid-area: service-1;
+	}
+	&__service--2 {
+		grid-area: service-2;
+	}
+	&__service--3 {
+		grid-area: service-3;
+	}
+	&__service--4 {
+		grid-area: service-4;
+	}
+	&__service--5 {
+		grid-area: service-5;
+	}
+
+	&__heading {
+		text-align: center;
+		font: $font-h2-bold;
+		&--italic {
+			font: $font-h2-italic;
+		}
+	}
+	&__service {
+		padding-left: 20px;
+	}
+
+	&__sub-heading--top {
+		font: $font-h3-bold;
+		&--decorated {
+			font: $font-h3-italic;
+			position: relative;
+			color: $white-100;
+			border-radius: 40%;
+			&::before {
+				content: ' ';
+				position: absolute;
+				left: -9px;
+				top: 12px;
+				z-index: -1;
+				background-color: $secondary-color;
+				height: 40px;
+				width: 58px;
+				border-radius: 41px;
+			}
+		}
+	}
+	/* GRID */
+	&__block-bottom {
+		display: grid;
+		column-gap: 5%;
+		grid-template-columns: auto;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-areas:
+			'. . heading button  '
+			'service-6 service-8 img img'
+			'service-7 service-9 img img';
+	}
+
+	&__sub-heading--bottom {
+		grid-area: heading;
+	}
+	&__cta-button {
+		grid-area: button;
+		position: relative;
+		top: 25px;
+	}
+	&__img--bottom {
+		grid-area: img;
+		width: 100%;
+		height: auto;
+	}
+	&__service--6 {
+		grid-area: service-6;
+	}
+	&__service--7 {
+		grid-area: service-7;
+	}
+	&__service--8 {
+		grid-area: service-8;
+	}
+	&__service--9 {
+		grid-area: service-9;
+	}
+
+	&__sub-heading--bottom {
+		font: $font-h3-bold;
+		&--decorated {
+			font: $font-h3-italic;
+			position: relative;
+			color: $white-100;
+			border-radius: 40%;
+			&::before {
+				content: ' ';
+				position: absolute;
+				left: -9px;
+				top: 12px;
+				z-index: -1;
+				background-color: $secondary-color;
+				height: 40px;
+				width: 105px;
+				border-radius: 41px;
+			}
+		}
+	}
+}
