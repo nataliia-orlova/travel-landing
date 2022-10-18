@@ -40,7 +40,7 @@ hr {
 }
 
 body {
-  background-color: #e5e5e5;
+  background-color: #f7f7f7;
 }
 
 footer {
@@ -725,7 +725,26 @@ footer {
   .contact__form {
     width: 100vw;
     border-radius: 0;
-    margin-bottom: 140px;
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 576px) {
+  .contact__heading {
+    font-family: Prompt;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .contact__heading--italic {
+    font-size: 38px;
+  }
+  .contact__form {
+    margin-bottom: 60px;
+  }
+  .contact {
+    margin-bottom: 80px;
   }
 }
 

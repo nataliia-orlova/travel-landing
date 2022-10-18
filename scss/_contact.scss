@@ -123,7 +123,26 @@
 		&__form {
 			width: 100vw;
 			border-radius: 0;
-			margin-bottom: 140px;
+			margin-bottom: 80px;
+		}
+	}
+	@media (max-width: 576px) {
+		&__heading {
+			font-family: Prompt;
+			font-size: 38px;
+			font-weight: 700;
+			line-height: 40px;
+			letter-spacing: 0em;
+			text-align: left;
+		}
+		&__heading--italic {
+			font-size: 38px;
+		}
+		&__form {
+			margin-bottom: 60px;
+		}
+		& {
+			margin-bottom: 80px;
 		}
 	}
 }
