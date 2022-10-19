@@ -1,8 +1,10 @@
 .blog {
 	margin-bottom: 200px;
+
 	&__top {
 		display: flex;
 		justify-content: space-between;
+
 		margin-bottom: 80px;
 	}
 	&__heading {
@@ -11,9 +13,13 @@
 			font: $font-h2-italic;
 		}
 	}
+	&__cta-button {
+		align-self: flex-end;
+	}
 	&__preview {
 		display: grid;
-		grid-auto-flow: column;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		overflow-x: auto;
 	}
 	&__article-heading {
 		font: $font-h4-medium;
@@ -21,14 +27,18 @@
 		margin-top: 10px;
 	}
 	&__img {
-		height: 253px;
-		width: 263px;
+		inline-size: 100%;
+
+		aspect-ratio: 1 / 1;
+		object-fit: cover;
 		margin-top: 59px;
 	}
 	&__card {
 		background-color: white;
 		padding: 32px;
 		display: flex;
+		min-width: 280px;
+
 		flex-direction: column;
 		border: solid 1px;
 		border-color: $grey-light-300;
@@ -51,5 +61,30 @@
 		text-align: left;
 
 		text-transform: uppercase;
+	}
+	&__card-text,
+	&__img {
+		flex-basis: 100%;
+	}
+
+	@media (max-width: 768px) {
+		& {
+			margin-bottom: 80px;
+		}
+		&__top {
+			flex-direction: column;
+			margin-bottom: 40px;
+			row-gap: 24px;
+		}
+		&__cta-button {
+			align-self: flex-start;
+		}
+	}
+	@media (max-width: 576px) {
+		&__heading,
+		&__heading--italic {
+			font-size: 38px;
+			line-height: 40px;
+		}
 	}
 }
