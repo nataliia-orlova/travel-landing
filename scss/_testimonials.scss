@@ -36,7 +36,8 @@
 		justify-content: space-between;
 	}
 	&__quote {
-		flex-basis: 50%;
+		// flex-basis: 50%;
+		max-width: 530px;
 		display: flex;
 		gap: 10%;
 	}
@@ -71,8 +72,7 @@
 	&__preview {
 		position: relative;
 		background-color: $secondary-color;
-		width: 528px;
-		height: 298px;
+		flex-basis: 40%;
 		border-radius: 10px;
 		align-self: flex-end;
 		&-heading {
@@ -115,12 +115,12 @@
 	}
 	&__preview--text {
 		display: flex;
-		position: relative;
+		// position: relative;
 		flex-direction: column;
 		justify-content: space-between;
 	}
 	&__preview-description {
-		position: relative;
+		// position: relative;
 		bottom: 32px;
 	}
 
@@ -135,5 +135,90 @@
 	}
 	&__img {
 		width: 100%;
+	}
+
+	@media (max-width: 1200px) {
+		&__block {
+			flex-direction: column-reverse;
+			margin-bottom: 110px;
+			gap: 64px;
+		}
+		&__preview,
+		&__quote {
+			align-self: center;
+		}
+		&__quote {
+			max-width: 60%;
+			gap: 5%;
+		}
+		&__quote-text > * {
+			margin-bottom: 16px;
+		}
+	}
+	@media (max-width: 992px) {
+		&__quote {
+			max-width: 80%;
+		}
+		&__quote-img {
+			height: calc(15.874162673950256px * 1.5);
+			width: calc(22.501039505004968px * 1.5);
+		}
+	}
+
+	@media (max-width: 576px) {
+		&__block {
+			gap: 32px;
+		}
+		&__quote-img {
+			height: 15.874162673950256px;
+			width: 22.501039505004968px;
+		}
+		&__heading,
+		&__heading--italic {
+			font-size: 38px;
+
+			line-height: 40px;
+			letter-spacing: 0em;
+		}
+		&__heading {
+			margin-bottom: 42px;
+		}
+
+		&__text {
+			font-size: 18px;
+			line-height: 25px;
+			letter-spacing: 0em;
+		}
+		&__name {
+			font-size: 18px;
+
+			line-height: 27px;
+		}
+		&__preview-heading {
+			font-family: Prompt;
+			font-size: 16px;
+
+			line-height: 18px;
+			letter-spacing: 0em;
+		}
+		&__preview-description {
+			font-family: Prompt;
+			font-size: 12px;
+
+			line-height: 18px;
+		}
+		&__preview-name {
+			font-family: Prompt;
+			font-size: 14px;
+
+			line-height: 21px;
+		}
+		&__img {
+			max-inline-size: 129px;
+		}
+		&__play {
+			height: 31.441415720154282px;
+			width: 27.945376866504375px;
+		}
 	}
 }

@@ -452,7 +452,7 @@ footer {
   justify-content: space-between;
 }
 .testimonials__quote {
-  flex-basis: 50%;
+  max-width: 530px;
   display: flex;
   gap: 10%;
 }
@@ -485,8 +485,7 @@ footer {
 .testimonials__preview {
   position: relative;
   background-color: #006633;
-  width: 528px;
-  height: 298px;
+  flex-basis: 40%;
   border-radius: 10px;
   align-self: flex-end;
 }
@@ -529,12 +528,10 @@ footer {
 }
 .testimonials__preview--text {
   display: flex;
-  position: relative;
   flex-direction: column;
   justify-content: space-between;
 }
 .testimonials__preview-description {
-  position: relative;
   bottom: 32px;
 }
 .testimonials__play {
@@ -548,6 +545,81 @@ footer {
 }
 .testimonials__img {
   width: 100%;
+}
+@media (max-width: 1200px) {
+  .testimonials__block {
+    flex-direction: column-reverse;
+    margin-bottom: 110px;
+    gap: 64px;
+  }
+  .testimonials__preview, .testimonials__quote {
+    align-self: center;
+  }
+  .testimonials__quote {
+    max-width: 60%;
+    gap: 5%;
+  }
+  .testimonials__quote-text > * {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 992px) {
+  .testimonials__quote {
+    max-width: 80%;
+  }
+  .testimonials__quote-img {
+    height: 23.8112440109px;
+    width: 33.7515592575px;
+  }
+}
+@media (max-width: 576px) {
+  .testimonials__block {
+    gap: 32px;
+  }
+  .testimonials__quote-img {
+    height: 15.874162674px;
+    width: 22.501039505px;
+  }
+  .testimonials__heading, .testimonials__heading--italic {
+    font-size: 38px;
+    line-height: 40px;
+    letter-spacing: 0em;
+  }
+  .testimonials__heading {
+    margin-bottom: 42px;
+  }
+  .testimonials__text {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0em;
+  }
+  .testimonials__name {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .testimonials__preview-heading {
+    font-family: Prompt;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0em;
+  }
+  .testimonials__preview-description {
+    font-family: Prompt;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .testimonials__preview-name {
+    font-family: Prompt;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .testimonials__img {
+    max-inline-size: 129px;
+  }
+  .testimonials__play {
+    height: 31.4414157202px;
+    width: 27.9453768665px;
+  }
 }
 
 .blog {
