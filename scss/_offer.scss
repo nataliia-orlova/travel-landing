@@ -9,9 +9,7 @@
 		margin-top: 140px;
 		margin-bottom: 180px;
 		display: grid;
-
-		column-gap: 5%;
-
+		column-gap: 2%;
 		grid-template-columns: auto;
 		grid-template-rows: 1fr 1fr 1fr;
 		grid-template-areas:
@@ -82,7 +80,7 @@
 	/* GRID */
 	&__block-bottom {
 		display: grid;
-		column-gap: 5%;
+		column-gap: 2%;
 		grid-template-columns: auto;
 		grid-template-rows: 1fr 1fr 1fr;
 		grid-template-areas:
@@ -135,6 +133,101 @@
 				width: 105px;
 				border-radius: 41px;
 			}
+		}
+	}
+	@media (max-width: 1200px) {
+		& {
+			margin-bottom: 100px;
+		}
+		&__block-top {
+			margin-bottom: 80px;
+			margin-top: 80px;
+		}
+		&__block-bottom {
+			grid-template-rows: 1fr 1fr 1fr;
+			grid-template-areas:
+				'service-6 service-8 heading button'
+				'service-7 service-9 img img'
+				'. . img img';
+		}
+		&__service--9,
+		&__service--8,
+		&__service--7,
+		&__service--6 {
+			margin-top: 10%;
+		}
+	}
+
+	@media (max-width: 992px) {
+		&__block-top {
+			column-gap: 5%;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
+			row-gap: 32px;
+			grid-template-areas:
+				'heading .'
+				'img img'
+				'service-1 service-3'
+				'service-2 service-4'
+				'service-5 .'
+				'button .';
+		}
+		&__block-bottom {
+			column-gap: 5%;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
+			row-gap: 32px;
+			grid-template-areas:
+				'heading heading'
+				'img img'
+				'service-6 service-8 '
+				'service-7 service-9'
+				'button .';
+		}
+	}
+	@media (max-width: 576px) {
+		&__sub-heading--bottom {
+			font-size: 26px;
+			line-height: 31px;
+			&--decorated {
+				font-size: 26px;
+				line-height: 31px;
+				&::before {
+					left: -10px;
+					top: 6px;
+					height: 28px;
+					width: 75px;
+				}
+			}
+		}
+		&__sub-heading--top {
+			font-size: 26px;
+			line-height: 31px;
+			&--decorated {
+				font-size: 26px;
+				line-height: 31px;
+				&::before {
+					left: -10px;
+					top: 8px;
+					height: 28px;
+					width: 42px;
+				}
+			}
+		}
+		&__heading,
+		&__heading--italic {
+			font-size: 38px;
+			line-height: 40px;
+		}
+		&__block-top {
+			margin-top: 60px;
+		}
+		&__text {
+			font-size: 16px;
+			line-height: 22px;
+		}
+		&__icon {
+			width: 40px;
 		}
 	}
 }
