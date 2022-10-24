@@ -224,6 +224,7 @@ footer {
   margin: 0;
   padding-top: 80px;
   word-spacing: 1rem;
+  padding-bottom: 80px;
 }
 .about-us__heading--bold {
   font: 700 60px/63px "Prompt", sans-serif;
@@ -235,29 +236,31 @@ footer {
   color: #ffffff;
   font: 300 16px/24px "Prompt", sans-serif;
   display: grid;
-  grid-template-columns: auto;
-  grid-template-areas: "first-column-first-paragraph second-column-first-paragraph third-column" "first-column-second-paragraph second-column-second-paragraph third-column" ". . third-column";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto 106px;
+  -moz-column-gap: 64px;
+       column-gap: 64px;
+  row-gap: 24px;
+  grid-template-areas: "first-column-first-paragraph second-column-first-paragraph img" "first-column-second-paragraph second-column-second-paragraph img" ". button img";
+}
+.about-us__picture {
+  grid-area: img;
 }
 .about-us__first-column--first-paragraph {
   grid-area: first-column-first-paragraph;
-  padding-top: 80px;
-  padding-right: 64px;
 }
 .about-us__first-column--second-paragraph {
   grid-area: first-column-second-paragraph;
-  padding-top: 24px;
-  padding-right: 64px;
 }
 .about-us__second-column--first-paragraph {
   grid-area: second-column-first-paragraph;
-  padding-top: 80px;
 }
 .about-us__second-column--second-paragraph {
   grid-area: second-column-second-paragraph;
-  padding-top: 24px;
 }
 .about-us__img {
-  grid-area: third-column;
+  width: 100%;
+  grid-area: img;
 }
 .about-us__cta-button {
   grid-area: second-column-second-paragraph;
@@ -265,6 +268,46 @@ footer {
 }
 .about-us .cta-link {
   color: #ffffff;
+}
+@media (max-width: 992px) {
+  .about-us__text {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto) 84px;
+    row-gap: 24px;
+    grid-template-areas: "img img" "first-column-first-paragraph second-column-first-paragraph" "first-column-second-paragraph second-column-second-paragraph" "button .";
+  }
+  .about-us__cta-button {
+    grid-area: button;
+    align-self: start;
+  }
+  .about-us__img {
+    max-inline-size: 600px;
+  }
+  .about-us__picture {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 576px) {
+  .about-us__text {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto) 84px;
+    row-gap: 24px;
+    grid-template-areas: "img" "first-column-first-paragraph" "first-column-second-paragraph" "second-column-first-paragraph" "second-column-second-paragraph" "button";
+  }
+  .about-us {
+    padding-bottom: 48px;
+  }
+  .about-us__heading {
+    padding-top: 48px;
+  }
+  .about-us__heading {
+    padding-bottom: 48px;
+  }
+  .about-us__heading--bold, .about-us__heading--italic {
+    font-size: 38px;
+    line-height: 105%;
+  }
 }
 
 .gallery__img {
@@ -285,6 +328,16 @@ footer {
   position: relative;
   margin: 0;
   padding: 0;
+}
+@media (max-width: 1200px) {
+  .gallery__img {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .gallery__description {
+    left: 24px;
+    bottom: 98px;
+  }
 }
 
 .offer {

@@ -8,6 +8,7 @@
 		margin: 0;
 		padding-top: 80px;
 		word-spacing: 1rem;
+		padding-bottom: 80px;
 	}
 
 	&__heading--bold {
@@ -23,34 +24,38 @@
 		color: $white-100;
 		font: $body-S;
 		display: grid;
-		grid-template-columns: auto;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto auto 106px;
+		column-gap: 64px;
+		row-gap: 24px;
 		grid-template-areas:
-			'first-column-first-paragraph second-column-first-paragraph third-column'
-			'first-column-second-paragraph second-column-second-paragraph third-column'
-			'. . third-column';
+			'first-column-first-paragraph second-column-first-paragraph img'
+			'first-column-second-paragraph second-column-second-paragraph img'
+			'. button img';
 	}
+	&__picture {
+		grid-area: img;
+	}
+
 	&__first-column--first-paragraph {
 		grid-area: first-column-first-paragraph;
-		padding-top: 80px;
-		padding-right: 64px;
 	}
 	&__first-column--second-paragraph {
 		grid-area: first-column-second-paragraph;
-		padding-top: 24px;
-		padding-right: 64px;
 	}
 	&__second-column--first-paragraph {
 		grid-area: second-column-first-paragraph;
-		padding-top: 80px;
 	}
 	&__second-column--second-paragraph {
 		grid-area: second-column-second-paragraph;
-		padding-top: 24px;
 	}
 
 	&__img {
-		grid-area: third-column;
+		width: 100%;
+		// min-width: 320px;
+		grid-area: img;
 	}
+
 	&__cta-button {
 		grid-area: second-column-second-paragraph;
 		align-self: end;
@@ -59,5 +64,61 @@
 	/* GRID */
 	.cta-link {
 		color: $white-100;
+	}
+
+	@media (max-width: 992px) {
+		&__text {
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: repeat(3, auto) 84px;
+			row-gap: 24px;
+			grid-template-areas:
+				'img img'
+				'first-column-first-paragraph second-column-first-paragraph'
+				'first-column-second-paragraph second-column-second-paragraph'
+				'button .';
+		}
+
+		&__cta-button {
+			grid-area: button;
+			align-self: start;
+		}
+		&__img {
+			max-inline-size: 600px;
+		}
+		&__picture {
+			display: flex;
+			justify-content: center;
+		}
+	}
+	@media (max-width: 576px) {
+		&__text {
+			grid-template-columns: 1fr;
+
+			grid-template-rows: repeat(5, auto) 84px;
+			row-gap: 24px;
+
+			grid-template-areas:
+				'img'
+				'first-column-first-paragraph'
+				'first-column-second-paragraph'
+				'second-column-first-paragraph'
+				'second-column-second-paragraph'
+				'button';
+		}
+
+		& {
+			padding-bottom: 48px;
+		}
+		&__heading {
+			padding-top: 48px;
+		}
+		&__heading {
+			padding-bottom: 48px;
+		}
+		&__heading--bold,
+		&__heading--italic {
+			font-size: 38px;
+			line-height: 105%;
+		}
 	}
 }
