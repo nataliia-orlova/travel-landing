@@ -137,79 +137,163 @@ footer {
 .hero {
   padding-top: 72px;
   padding-bottom: 120px;
+  /* GRID */
 }
 .hero__img1 {
-  width: 155px;
-  height: 150px;
+  width: 100%;
+  max-width: 155px;
+  height: auto;
   border-radius: 12px;
 }
 .hero__heading {
-  font: 700 90px/110% "Prompt", sans-serif;
+  font-family: Prompt;
+  font-size: clamp(2.75rem, 1.5rem + 4vw, 5.625rem);
+  font-weight: 700;
+  line-height: 99px;
+  letter-spacing: 0em;
+  text-align: left;
   text-transform: uppercase;
   color: #393738;
 }
 .hero__heading--itallic {
   font: italic 300 90px/99% "Prompt", sans-serif;
+  font-size: clamp(2.75rem, 1.5rem + 4vw, 5.625rem);
   text-transform: none;
 }
 .hero__heading--colored {
   color: #ff8607;
 }
 .hero__img2 {
-  width: 205px;
-  height: 317px;
+  width: 100%;
+  max-width: 205px;
+  height: auto;
 }
 .hero__cta {
   display: flex;
-  padding-left: 64px;
   align-items: flex-end;
-  gap: 10rem;
+  gap: 20%;
 }
 .hero__usp {
   margin: 0;
   color: #393738;
   font: italic 300 16px/24px "Prompt", sans-serif;
 }
-
-/* GRID */
-.hero__content {
+.hero .hero__content {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 155px auto 205px;
+  grid-template-columns: auto;
   grid-template-areas: "img1 first-line first-line" ". second-line img2" ". third-line img2" ". cta-block img2";
 }
-
-.first-line {
+.hero .first-line {
   grid-area: first-line;
   align-self: end;
-  justify-self: end;
-  margin-right: 56px;
+  margin-left: 2%;
 }
-
-.second-line {
+.hero .second-line {
   grid-area: second-line;
-  align-self: end;
+  align-self: start;
+  justify-self: flex-start;
 }
-
-.third-line {
+.hero .third-line {
   grid-area: third-line;
-  align-self: end;
-  justify-self: end;
-  margin-right: 56px;
+  margin-left: 2%;
 }
-
-.hero__img1 {
+.hero .hero__img1 {
   grid-area: img1;
 }
-
-.hero__img2 {
+.hero .hero__img2 {
   grid-area: img2;
   align-self: end;
+  justify-self: end;
 }
-
-.hero__cta {
+.hero .hero__cta {
   grid-area: cta-block;
-  height: 144px;
+}
+@media (max-width: 1200px) {
+  .hero .hero__content {
+    grid-template-areas: "first-line first-line first-line" "second-line second-line second-line" "third-line third-line img2" "img1 cta-block img2";
+  }
+  .hero__heading {
+    line-height: 82px;
+  }
+  .hero__img1 {
+    align-self: end;
+    margin-right: 12px;
+  }
+  .hero__img2 {
+    justify-self: end;
+    margin-left: 12px;
+  }
+  .hero .third-line {
+    margin-right: 2%;
+    margin-left: auto;
+  }
+  .hero .second-line {
+    justify-self: center;
+  }
+  .hero .first-line {
+    justify-self: center;
+  }
+  .hero__cta {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    align-self: end;
+    justify-content: flex-start;
+    gap: 10%;
+  }
+  .hero__cta-button {
+    margin-top: 32px;
+  }
+}
+@media (max-width: 992px) {
+  .hero__heading {
+    line-height: 68px;
+  }
+  .hero .hero__content {
+    grid-template-areas: "first-line first-line first-line" "second-line second-line second-line" "third-line third-line third-line" "cta-block cta-block img2" "img1 . img2";
+  }
+  .hero .third-line {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .hero .hero__content {
+    grid-template-areas: "first-line first-line" "second-line second-line" "third-line third-line" "cta-block img2" "img1  img2";
+  }
+  .hero .first-line {
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .hero .hero__content {
+    grid-template-areas: "first-line " "second-line " "third-line " "cta-block " "img1  ";
+  }
+  .hero__img2 {
+    display: none;
+  }
+  .hero__cta {
+    margin-bottom: 62px;
+  }
+  .hero__heading {
+    font-family: Prompt;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+}
+@media (max-width: 360px) {
+  .hero__heading {
+    font-family: Prompt;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
 }
 
 .about-us {

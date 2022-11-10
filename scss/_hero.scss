@@ -3,18 +3,25 @@
 	padding-bottom: 120px;
 
 	&__img1 {
-		width: 155px;
-		height: 150px;
+		width: 100%;
+		max-width: 155px;
+		height: auto;
 		border-radius: 12px;
 	}
 
 	&__heading {
-		font: $font-h1-bold;
+		font-family: Prompt;
+		font-size: clamp(2.75rem, 1.5rem + 4vw, 5.625rem);
+		font-weight: 700;
+		line-height: 99px;
+		letter-spacing: 0em;
+		text-align: left;
 		text-transform: uppercase;
 		color: $dark-500;
 
 		&--itallic {
 			font: $font-h1-italic;
+			font-size: clamp(2.75rem, 1.5rem + 4vw, 5.625rem);
 			text-transform: none;
 		}
 
@@ -24,62 +31,164 @@
 	}
 
 	&__img2 {
-		width: 205px;
-		height: 317px;
+		width: 100%;
+		max-width: 205px;
+		height: auto;
 	}
 	&__cta {
 		display: flex;
-		padding-left: 64px;
 		align-items: flex-end;
-		gap: 10rem;
+		gap: 20%;
 	}
 	&__usp {
 		margin: 0;
 		color: $dark-500;
 		font: $body-S-bold-italic;
 	}
-}
-/* GRID */
-.hero__content {
-	display: grid;
+	/* GRID */
+	.hero__content {
+		display: grid;
+		grid-template-rows: auto;
+		grid-template-columns: auto;
+		grid-template-areas:
+			'img1 first-line first-line'
+			'. second-line img2'
+			'. third-line img2'
+			'. cta-block img2';
+	}
 
-	grid-template-rows: auto;
-	grid-template-columns: 155px auto 205px;
-	grid-template-areas:
-		"img1 first-line first-line"
-		". second-line img2"
-		". third-line img2"
-		". cta-block img2";
-}
+	.first-line {
+		grid-area: first-line;
+		align-self: end;
+		margin-left: 2%;
+	}
 
-.first-line {
-	grid-area: first-line;
-	align-self: end;
-	justify-self: end;
-	margin-right: 56px;
-}
+	.second-line {
+		grid-area: second-line;
+		align-self: start;
+		justify-self: flex-start;
+	}
 
-.second-line {
-	grid-area: second-line;
-	align-self: end;
-}
+	.third-line {
+		grid-area: third-line;
+		margin-left: 2%;
+	}
+	.hero__img1 {
+		grid-area: img1;
+	}
 
-.third-line {
-	grid-area: third-line;
-	align-self: end;
-	justify-self: end;
-	margin-right: 56px;
-}
-.hero__img1 {
-	grid-area: img1;
-}
+	.hero__img2 {
+		grid-area: img2;
+		align-self: end;
+		justify-self: end;
+	}
 
-.hero__img2 {
-	grid-area: img2;
-	align-self: end;
-}
-
-.hero__cta {
-	grid-area: cta-block;
-	height: 144px;
+	.hero__cta {
+		grid-area: cta-block;
+	}
+	@media (max-width: 1200px) {
+		.hero__content {
+			grid-template-areas:
+				'first-line first-line first-line'
+				'second-line second-line second-line'
+				'third-line third-line img2'
+				'img1 cta-block img2';
+		}
+		&__heading {
+			line-height: 82px;
+		}
+		&__img1 {
+			align-self: end;
+			margin-right: 12px;
+		}
+		&__img2 {
+			justify-self: end;
+			margin-left: 12px;
+		}
+		.third-line {
+			margin-right: 2%;
+			margin-left: auto;
+		}
+		.second-line {
+			justify-self: center;
+		}
+		.first-line {
+			justify-self: center;
+		}
+		&__cta {
+			align-items: flex-start;
+			flex-direction: column-reverse;
+			align-self: end;
+			justify-content: flex-start;
+			gap: 10%;
+		}
+		&__cta-button {
+			margin-top: 32px;
+		}
+	}
+	@media (max-width: 992px) {
+		&__heading {
+			line-height: 68px;
+		}
+		.hero__content {
+			grid-template-areas:
+				'first-line first-line first-line'
+				'second-line second-line second-line'
+				'third-line third-line third-line'
+				'cta-block cta-block img2'
+				'img1 . img2';
+		}
+		.third-line {
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 24px;
+		}
+	}
+	@media (max-width: 768px) {
+		.hero__content {
+			grid-template-areas:
+				'first-line first-line'
+				'second-line second-line'
+				'third-line third-line'
+				'cta-block img2'
+				'img1  img2';
+		}
+		.first-line {
+			text-align: center;
+		}
+	}
+	@media (max-width: 576px) {
+		.hero__content {
+			grid-template-areas:
+				'first-line '
+				'second-line '
+				'third-line '
+				'cta-block '
+				'img1  ';
+		}
+		&__img2 {
+			display: none;
+		}
+		&__cta {
+			margin-bottom: 62px;
+		}
+		&__heading {
+			font-family: Prompt;
+			font-size: 44px;
+			font-weight: 700;
+			line-height: 48px;
+			letter-spacing: 0em;
+			text-align: center;
+		}
+	}
+	@media (max-width: 360px) {
+		&__heading {
+			font-family: Prompt;
+			font-size: 42px;
+			font-weight: 700;
+			line-height: 48px;
+			letter-spacing: 0em;
+			text-align: center;
+		}
+	}
 }
