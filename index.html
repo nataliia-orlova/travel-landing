@@ -1,573 +1,623 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Birago</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="scss/styles.css" />
-	</head>
-	<body>
-		<header class="header container">
-			<a href="index.html">
-				<img
-					src="assets/images/Birago-logo.svg"
-					alt="Birago logo"
-					class="header__logo"
-			/></a>
-			<nav class="header__nav">
-				<ul class="header__nav-list">
-					<li><a href="">About us</a></li>
-					<li><a href="">Services</a></li>
-					<li><a href="">Discover Ghana</a></li>
-					<li><a href="">Contact us</a></li>
-				</ul>
-			</nav>
-			<div class="header__button-block">
-				<button class="header__button header__button--empty">
-					Get in touch
-				</button>
-				<button class="header__button header__button--filled">
-					Plan your trip
-				</button>
-			</div>
-		</header>
-		<main>
-			<section class="hero container">
-				<div class="hero__content">
-					<img
-						class="hero__img1"
-						src="assets/images/A woman from Ghana.png"
-						alt="A woman from Ghana"
-					/>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Birago</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="scss/styles.css" />
+    </head>
+    <body>
+        <header class="header container">
+            <a href="index.html" alt="Birago logo">
+                <img src="assets/images/Birago-logo.svg" class="header__logo"
+            /></a>
+            <div class="overlay"></div>
+            <div
+                class="header__nav-block header__nav-block--green"
+                data-nav-div
+            >
+                <div
+                    class="header__nav-block header__nav-block--orange"
+                    data-nav-div
+                >
+                    <div
+                        class="header__nav-block header__nav-block--grey"
+                        data-nav-div
+                    >
+                        <nav class="header__nav header__nav--responsive">
+                            <ul
+                                class="header__nav-list header__nav-list--responsive"
+                            >
+                                <li><a href="">About us</a></li>
+                                <li><a href="">Services</a></li>
+                                <li><a href="">Discover Ghana</a></li>
+                                <li><a href="">Contact us</a></li>
+                            </ul>
+                        </nav>
+                        <div
+                            class="header__button-block header__button-block--responsive"
+                        >
+                            <button
+                                class="header__button header__button--empty"
+                            >
+                                Get in touch
+                            </button>
+                            <button
+                                class="header__button header__button--filled"
+                            >
+                                Plan your trip
+                            </button>
+                        </div>
+                        <div class="header__nav-btn--close" data-btn-close>
+                            <span class="header__bar"></span>
+                            <span class="header__bar"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-					<div class="hero__heading first-line">
-						World-class travel
-					</div>
+            <div class="header__nav-btn--open" data-btn-open>
+                <span class="header__bar"></span>
+                <span class="header__bar"></span>
+                <span class="header__bar"></span>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Discover Ghana</a></li>
+                    <li><a href="">Contact us</a></li>
+                </ul>
+            </nav>
+            <div class="header__button-block">
+                <button class="header__button header__button--empty">
+                    Get in touch
+                </button>
+                <button class="header__button header__button--filled">
+                    Plan your trip
+                </button>
+            </div>
+        </header>
+        <main>
+            <section class="hero container">
+                <div class="hero__content">
+                    <img
+                        class="hero__img1"
+                        src="assets/images/A woman from Ghana.png"
+                        alt="A woman from Ghana"
+                    />
 
-					<div class="hero__heading second-line">
-						experience
-						<span class="hero__heading--itallic">to</span>
-					</div>
+                    <div class="hero__heading first-line">
+                        World-class travel
+                    </div>
 
-					<div class="hero__heading third-line">
-						and <span class="hero__heading--itallic">from</span>
-						<span class="hero__heading--colored">Ghana</span>
-					</div>
+                    <div class="hero__heading second-line">
+                        experience
+                        <span class="hero__heading--itallic">to</span>
+                    </div>
 
-					<img
-						class="hero__img2"
-						src="assets/images/A ceremony in Ghana.png"
-						alt="A ceremony in Ghana"
-					/>
-					<div class="hero__cta">
-						<div class="cta-button hero__cta-button">
-							<a href="" class="cta-link">Let's talk</a>
-							<img
-								class="cta-arrow"
-								src="assets/icons/arrow long.svg"
-								alt=""
-							/>
-						</div>
-						<h2 class="hero__usp">
-							Personalized travel services tailored <br />
-							to your needs
-						</h2>
-					</div>
-				</div>
-			</section>
-			<section class="about-us">
-				<div class="container">
-					<h2 class="about-us__heading">
-						<span class="about-us__heading--bold">About</span>
-						<span class="about-us__heading--italic"> Us</span>
-					</h2>
-					<div class="about-us__text">
-						<p class="about-us__first-column--first-paragraph">
-							BIRAGO TRAVEL was created to enhance the travel
-							experiences of individuals and groups planning to
-							visit Ghana. We assist students and adults who would
-							like to continue their education or travel to
-							countries in North America and Europe.
-						</p>
-						<p class="about-us__first-column--second-paragraph">
-							We realize the need for our services at a time when
-							the world has become a global place within complex
-							cultural trends among nations far apart from each
-							other, with nations trying to find the need to learn
-							from each other, around shared values.
-						</p>
-						<p class="about-us__second-column--first-paragraph">
-							We provide specialized travel services tailored to
-							the needs of our prospective clients with their
-							culture in mind, by designing various programs which
-							ensure memorable experiences.
-						</p>
-						<p class="about-us__second-column--second-paragraph">
-							For this, we retain profiles of our clients, so we
-							can create experiences which adhere to their dreams.
-						</p>
-						<div class="cta-button about-us__cta-button">
-							<a href="" class="cta-link">More about us</a>
-							<img
-								class="cta-arrow"
-								src="assets/icons/arrow long.svg"
-								alt=""
-							/>
-						</div>
-						<div class="about-us__picture">
-							<picture>
-								<source
-									srcset="
-										assets/images/plane-without-shadow-mobile.png
-									"
-									media="(max-width: 992px)"
-								/>
-								<img
-									class="about-us__img"
-									src="assets/images/plane with shadow.png"
-									alt=""
-								/>
-							</picture>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="gallery container">
-				<figure>
-					<img
-						class="gallery__img"
-						src="assets/images/The Royal Senchi Resort - Ghana.png"
-						alt=""
-					/>
-					<figcaption class="gallery__description">
-						The Royal Senchi Resort - Ghana
-					</figcaption>
-				</figure>
-			</section>
-			<section class="offer container">
-				<h2 class="offer__heading">
-					What <span class="offer__heading--italic"> We</span> Offer
-				</h2>
-				<div class="offer__block-top">
-					<h3 class="offer__sub-heading--top">
-						Travelers <br />
-						<span class="offer__sub-heading--top--decorated">
-							to</span
-						>
-						Ghana
-					</h3>
-					<div class="cta-button offer__cta-button">
-						<a href="" class="cta-link">Read more</a>
-						<img
-							class="cta-arrow"
-							src="assets/icons/arrow long.svg"
-							alt=""
-						/>
-					</div>
-					<img
-						class="offer__img--top"
-						src="assets/images/A happy man and a woman in Ghana.png"
-						alt=""
-					/>
-					<div class="offer__service--1 offer__service">
-						<img
-							src="assets/icons/customer-care.svg"
-							alt=""
-							class="offer__icon"
-						/>
-						<p class="offer__text offer__text-left--top">
-							Tourist hosting and personal assistance
-						</p>
-					</div>
-					<div class="offer__service--2 offer__service">
-						<img
-							src="assets/icons/event.svg"
-							alt=""
-							class="offer__icon"
-						/>
-						<p class="offer__text offer__text-left--middle">
-							Destination events for special occasions
-						</p>
-					</div>
-					<div class="offer__service--3 offer__service">
-						<img
-							src="assets/icons/student.svg"
-							alt=""
-							class="offer__icon"
-						/>
-						<p class="offer__text offer__text-left--bottom">
-							Student travel and cultural exchange programs
-						</p>
-					</div>
-					<div class="offer__service--4 offer__service">
-						<img
-							src="assets/icons/car.svg"
-							alt=""
-							class="offer__icon"
-						/>
-						<p class="offer__text offer__text-right--top">
-							Robust and luxury on-site transportation
-						</p>
-					</div>
-					<div class="offer__service--5 offer__service">
-						<img
-							src="assets/icons/guide.svg"
-							alt=""
-							class="offer__icon"
-						/>
-						<p class="offer__text offer__text-right--middle">
-							Guided individual or group tours
-						</p>
-					</div>
-				</div>
-				<div class="offer__block-bottom">
-					<div class="offer__service--6 offer__service">
-						<img
-							src="assets/icons/student.svg"
-							alt=""
-							class="offer__icon"
-						/>
-						<p class="offer__text offer__text-left--top">
-							Student travel and cultural exchange programs
-						</p>
-					</div>
-					<div class="offer__service--7 offer__service">
-						<img
-							src="assets/icons/support.svg"
-							alt=""
-							class="offer__icon"
-						/>
-						<p class="offer__text offer__text-left--bottom">
-							Travel orientation and recommendations
-						</p>
-					</div>
-					<div class="offer__service--8 offer__service">
-						<img
-							src="assets/icons/tickets.svg"
-							alt=""
-							class="offer__icon"
-						/>
-						<p class="offer__text offer__text-right--top">
-							Visa consultation and support
-						</p>
-					</div>
-					<div class="offer__service--9 offer__service">
-						<img
-							src="assets/icons/room.svg"
-							alt=""
-							class="offer__icon"
-						/>
-						<p class="offer__text offer__text-right--bottom">
-							External travel room and board
-						</p>
-					</div>
+                    <div class="hero__heading third-line">
+                        and <span class="hero__heading--itallic">from</span>
+                        <span class="hero__heading--colored">Ghana</span>
+                    </div>
 
-					<h3 class="offer__sub-heading--bottom">
-						Travellers <br />
-						<span class="offer__sub-heading--bottom--decorated">
-							from</span
-						>
-						Ghana
-					</h3>
-					<div class="cta-button offer__cta-button">
-						<a href="" class="cta-link">Read more</a>
-						<img
-							class="cta-arrow"
-							src="assets/icons/arrow long.svg"
-							alt=""
-						/>
-					</div>
-					<img
-						class="offer__img--bottom"
-						src="assets/images/A smiling student.png"
-						alt=""
-					/>
-				</div>
-			</section>
-			<section class="testimonials container">
-				<h2 class="testimonials__heading">
-					What our
-					<span class="testimonials__heading--italic">clients</span>
-					say <br />
-					about us
-				</h2>
-				<div class="testimonials__block">
-					<blockquote class="testimonials__quote">
-						<img
-							src="assets/icons/Quotation marks.svg"
-							alt=""
-							class="testimonials__quote-img"
-						/>
-						<div class="testimonials__quote-text">
-							<p class="testimonials__text">
-								We believe that Ghana can be a travel hub for
-								connecting Africa to other countries around the
-								world.
-							</p>
-							<div class="testimonials__client">
-								<p class="testimonials__name">Berta Nyame</p>
-								<p class="testimonials__name--description">
-									Client
-								</p>
-							</div>
-							<div class="testimonials__arrows">
-								<img
-									src="assets/icons/left.svg"
-									alt=""
-									class="testimonials__arrow--left"
-								/>
-								<img
-									src="assets/icons/right.svg"
-									alt=""
-									class="testimonials__arrow--right"
-								/>
-							</div>
-						</div>
-					</blockquote>
-					<div class="testimonials__preview">
-						<div class="testimonials__preview--details">
-							<div class="testimonials__preview--text">
-								<p class="testimonials__preview-heading">
-									Client <br />
-									testimonial
-								</p>
-								<p class="testimonials__preview-description">
-									Why I prefer <br />Birago
-								</p>
-								<p class="testimonials__preview-name">
-									Bertha Nyame
-								</p>
-							</div>
-							<div>
-								<img
-									src="assets/images/A happy woman testimonials.png"
-									alt=""
-									class="testimonials__img"
-								/>
-							</div>
-						</div>
+                    <img
+                        class="hero__img2"
+                        src="assets/images/A ceremony in Ghana.png"
+                        alt="A ceremony in Ghana"
+                    />
+                    <div class="hero__cta">
+                        <div class="cta-button hero__cta-button">
+                            <a href="" class="cta-link">Let's talk</a>
+                            <img
+                                class="cta-arrow"
+                                src="assets/icons/arrow long.svg"
+                                alt=""
+                            />
+                        </div>
+                        <h2 class="hero__usp">
+                            Personalized travel services tailored <br />
+                            to your needs
+                        </h2>
+                    </div>
+                </div>
+            </section>
+            <section class="about-us">
+                <div class="container">
+                    <h2 class="about-us__heading">
+                        <span class="about-us__heading--bold">About</span>
+                        <span class="about-us__heading--italic"> Us</span>
+                    </h2>
+                    <div class="about-us__text">
+                        <p class="about-us__first-column--first-paragraph">
+                            BIRAGO TRAVEL was created to enhance the travel
+                            experiences of individuals and groups planning to
+                            visit Ghana. We assist students and adults who would
+                            like to continue their education or travel to
+                            countries in North America and Europe.
+                        </p>
+                        <p class="about-us__first-column--second-paragraph">
+                            We realize the need for our services at a time when
+                            the world has become a global place within complex
+                            cultural trends among nations far apart from each
+                            other, with nations trying to find the need to learn
+                            from each other, around shared values.
+                        </p>
+                        <p class="about-us__second-column--first-paragraph">
+                            We provide specialized travel services tailored to
+                            the needs of our prospective clients with their
+                            culture in mind, by designing various programs which
+                            ensure memorable experiences.
+                        </p>
+                        <p class="about-us__second-column--second-paragraph">
+                            For this, we retain profiles of our clients, so we
+                            can create experiences which adhere to their dreams.
+                        </p>
+                        <div class="cta-button about-us__cta-button">
+                            <a href="" class="cta-link">More about us</a>
+                            <img
+                                class="cta-arrow"
+                                src="assets/icons/arrow long.svg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="about-us__picture">
+                            <picture>
+                                <source
+                                    srcset="
+                                        assets/images/plane-without-shadow-mobile.png
+                                    "
+                                    media="(max-width: 992px)"
+                                />
+                                <img
+                                    class="about-us__img"
+                                    src="assets/images/plane with shadow.png"
+                                    alt=""
+                                />
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="gallery container">
+                <figure>
+                    <img
+                        class="gallery__img"
+                        src="assets/images/The Royal Senchi Resort - Ghana.png"
+                        alt=""
+                    />
+                    <figcaption class="gallery__description">
+                        The Royal Senchi Resort - Ghana
+                    </figcaption>
+                </figure>
+            </section>
+            <section class="offer container">
+                <h2 class="offer__heading">
+                    What
+                    <span class="offer__heading--italic"> We</span> Offer
+                </h2>
+                <div class="offer__block-top">
+                    <h3 class="offer__sub-heading--top">
+                        Travelers <br />
+                        <span class="offer__sub-heading--top--decorated">
+                            to</span
+                        >
+                        Ghana
+                    </h3>
+                    <div class="cta-button offer__cta-button">
+                        <a href="" class="cta-link">Read more</a>
+                        <img
+                            class="cta-arrow"
+                            src="assets/icons/arrow long.svg"
+                            alt=""
+                        />
+                    </div>
+                    <img
+                        class="offer__img--top"
+                        src="assets/images/A happy man and a woman in Ghana.png"
+                        alt=""
+                    />
+                    <div class="offer__service--1 offer__service">
+                        <img
+                            src="assets/icons/customer-care.svg"
+                            alt=""
+                            class="offer__icon"
+                        />
+                        <p class="offer__text offer__text-left--top">
+                            Tourist hosting and personal assistance
+                        </p>
+                    </div>
+                    <div class="offer__service--2 offer__service">
+                        <img
+                            src="assets/icons/event.svg"
+                            alt=""
+                            class="offer__icon"
+                        />
+                        <p class="offer__text offer__text-left--middle">
+                            Destination events for special occasions
+                        </p>
+                    </div>
+                    <div class="offer__service--3 offer__service">
+                        <img
+                            src="assets/icons/student.svg"
+                            alt=""
+                            class="offer__icon"
+                        />
+                        <p class="offer__text offer__text-left--bottom">
+                            Student travel and cultural exchange programs
+                        </p>
+                    </div>
+                    <div class="offer__service--4 offer__service">
+                        <img
+                            src="assets/icons/car.svg"
+                            alt=""
+                            class="offer__icon"
+                        />
+                        <p class="offer__text offer__text-right--top">
+                            Robust and luxury on-site transportation
+                        </p>
+                    </div>
+                    <div class="offer__service--5 offer__service">
+                        <img
+                            src="assets/icons/guide.svg"
+                            alt=""
+                            class="offer__icon"
+                        />
+                        <p class="offer__text offer__text-right--middle">
+                            Guided individual or group tours
+                        </p>
+                    </div>
+                </div>
+                <div class="offer__block-bottom">
+                    <div class="offer__service--6 offer__service">
+                        <img
+                            src="assets/icons/student.svg"
+                            alt=""
+                            class="offer__icon"
+                        />
+                        <p class="offer__text offer__text-left--top">
+                            Student travel and cultural exchange programs
+                        </p>
+                    </div>
+                    <div class="offer__service--7 offer__service">
+                        <img
+                            src="assets/icons/support.svg"
+                            alt=""
+                            class="offer__icon"
+                        />
+                        <p class="offer__text offer__text-left--bottom">
+                            Travel orientation and recommendations
+                        </p>
+                    </div>
+                    <div class="offer__service--8 offer__service">
+                        <img
+                            src="assets/icons/tickets.svg"
+                            alt=""
+                            class="offer__icon"
+                        />
+                        <p class="offer__text offer__text-right--top">
+                            Visa consultation and support
+                        </p>
+                    </div>
+                    <div class="offer__service--9 offer__service">
+                        <img
+                            src="assets/icons/room.svg"
+                            alt=""
+                            class="offer__icon"
+                        />
+                        <p class="offer__text offer__text-right--bottom">
+                            External travel room and board
+                        </p>
+                    </div>
 
-						<img
-							src="assets/icons/play.svg"
-							alt=""
-							class="testimonials__play"
-						/>
-					</div>
-				</div>
-			</section>
-			<section class="blog container">
-				<div class="blog__top">
-					<h2 class="blog__heading">
-						Discover
-						<span class="blog__heading--italic"> Ghana</span>
-					</h2>
-					<div class="cta-button blog__cta-button">
-						<a href="" class="cta-link">Explore more</a>
-						<img
-							class="cta-arrow"
-							src="assets/icons/arrow long.svg"
-							alt=""
-						/>
-					</div>
-				</div>
-				<div class="blog__preview">
-					<div class="blog__card blog__card--1">
-						<div class="blog__card-text">
-							<p class="blog__tag">tailored services</p>
-							<p class="blog__article-heading">
-								Concierge travel experiences
-							</p>
-						</div>
-						<img
-							src="assets/images/Ghana assistant.png"
-							alt=""
-							class="blog__img"
-						/>
-					</div>
-					<div class="blog__card blog__card--2">
-						<div class="blog__card-text">
-							<p class="blog__tag">nature</p>
-							<p class="blog__article-heading">
-								exciting natural trips
-							</p>
-						</div>
-						<img
-							src="assets/images/Ghana traveler.png"
-							alt=""
-							class="blog__img"
-						/>
-					</div>
-					<div class="blog__card blog__card--3">
-						<div class="blog__card-text">
-							<p class="blog__tag">sightseeing</p>
-							<p class="blog__article-heading">
-								private and group guided tours
-							</p>
-						</div>
-						<img
-							src="assets/images/Ghana guided tour.png"
-							alt=""
-							class="blog__img"
-						/>
-					</div>
-					<div class="blog__card blog__card--4">
-						<div class="blog__card-text">
-							<p class="blog__tag">nightlife</p>
-							<p class="blog__article-heading">
-								plenty avenues for night fun
-							</p>
-						</div>
-						<img
-							src="assets/images/Ghana musician.png"
-							alt=""
-							class="blog__img"
-						/>
-					</div>
-				</div>
-			</section>
-			<section class="contact container">
-				<div class="contact__block">
-					<div class="contact__img">
-						<img
-							src="assets/images/map.png"
-							alt="Africa map"
-							class="contact__img"
-						/>
-					</div>
-					<div class="contact__form">
-						<h2 class="contact__heading">
-							Get a
-							<span class="contact__heading--italic">free</span>
-							consultation
-						</h2>
-						<form action="form-output.html" method="post">
-							<label for="name">Your name</label>
-							<input
-								type="text"
-								name="name"
-								id="name"
-								placeholder="Dolores"
-								required
-							/>
+                    <h3 class="offer__sub-heading--bottom">
+                        Travellers <br />
+                        <span class="offer__sub-heading--bottom--decorated">
+                            from</span
+                        >
+                        Ghana
+                    </h3>
+                    <div class="cta-button offer__cta-button">
+                        <a href="" class="cta-link">Read more</a>
+                        <img
+                            class="cta-arrow"
+                            src="assets/icons/arrow long.svg"
+                            alt=""
+                        />
+                    </div>
+                    <img
+                        class="offer__img--bottom"
+                        src="assets/images/A smiling student.png"
+                        alt=""
+                    />
+                </div>
+            </section>
+            <section class="testimonials container">
+                <h2 class="testimonials__heading">
+                    What our
+                    <span class="testimonials__heading--italic">clients</span>
+                    say <br />
+                    about us
+                </h2>
+                <div class="testimonials__block">
+                    <blockquote class="testimonials__quote">
+                        <img
+                            src="assets/icons/Quotation marks.svg"
+                            alt=""
+                            class="testimonials__quote-img"
+                        />
+                        <div class="testimonials__quote-text">
+                            <p class="testimonials__text">
+                                We believe that Ghana can be a travel hub for
+                                connecting Africa to other countries around the
+                                world.
+                            </p>
+                            <div class="testimonials__client">
+                                <p class="testimonials__name">Berta Nyame</p>
+                                <p class="testimonials__name--description">
+                                    Client
+                                </p>
+                            </div>
+                            <div class="testimonials__arrows">
+                                <img
+                                    src="assets/icons/left.svg"
+                                    alt=""
+                                    class="testimonials__arrow--left"
+                                />
+                                <img
+                                    src="assets/icons/right.svg"
+                                    alt=""
+                                    class="testimonials__arrow--right"
+                                />
+                            </div>
+                        </div>
+                    </blockquote>
+                    <div class="testimonials__preview">
+                        <div class="testimonials__preview--details">
+                            <div class="testimonials__preview--text">
+                                <p class="testimonials__preview-heading">
+                                    Client <br />
+                                    testimonial
+                                </p>
+                                <p class="testimonials__preview-description">
+                                    Why I prefer <br />Birago
+                                </p>
+                                <p class="testimonials__preview-name">
+                                    Bertha Nyame
+                                </p>
+                            </div>
+                            <div>
+                                <img
+                                    src="assets/images/A happy woman testimonials.png"
+                                    alt=""
+                                    class="testimonials__img"
+                                />
+                            </div>
+                        </div>
 
-							<label for="email">Your email</label>
-							<input
-								type="email"
-								name="email"
-								id="email"
-								placeholder="address@email.com"
-								required
-							/>
+                        <img
+                            src="assets/icons/play.svg"
+                            alt=""
+                            class="testimonials__play"
+                        />
+                    </div>
+                </div>
+            </section>
+            <section class="blog container">
+                <div class="blog__top">
+                    <h2 class="blog__heading">
+                        Discover
+                        <span class="blog__heading--italic"> Ghana</span>
+                    </h2>
+                    <div class="cta-button blog__cta-button">
+                        <a href="" class="cta-link">Explore more</a>
+                        <img
+                            class="cta-arrow"
+                            src="assets/icons/arrow long.svg"
+                            alt=""
+                        />
+                    </div>
+                </div>
+                <div class="blog__preview">
+                    <div class="blog__card blog__card--1">
+                        <div class="blog__card-text">
+                            <p class="blog__tag">tailored services</p>
+                            <p class="blog__article-heading">
+                                Concierge travel experiences
+                            </p>
+                        </div>
+                        <img
+                            src="assets/images/Ghana assistant.png"
+                            alt=""
+                            class="blog__img"
+                        />
+                    </div>
+                    <div class="blog__card blog__card--2">
+                        <div class="blog__card-text">
+                            <p class="blog__tag">nature</p>
+                            <p class="blog__article-heading">
+                                exciting natural trips
+                            </p>
+                        </div>
+                        <img
+                            src="assets/images/Ghana traveler.png"
+                            alt=""
+                            class="blog__img"
+                        />
+                    </div>
+                    <div class="blog__card blog__card--3">
+                        <div class="blog__card-text">
+                            <p class="blog__tag">sightseeing</p>
+                            <p class="blog__article-heading">
+                                private and group guided tours
+                            </p>
+                        </div>
+                        <img
+                            src="assets/images/Ghana guided tour.png"
+                            alt=""
+                            class="blog__img"
+                        />
+                    </div>
+                    <div class="blog__card blog__card--4">
+                        <div class="blog__card-text">
+                            <p class="blog__tag">nightlife</p>
+                            <p class="blog__article-heading">
+                                plenty avenues for night fun
+                            </p>
+                        </div>
+                        <img
+                            src="assets/images/Ghana musician.png"
+                            alt=""
+                            class="blog__img"
+                        />
+                    </div>
+                </div>
+            </section>
+            <section class="contact container">
+                <div class="contact__block">
+                    <div class="contact__img">
+                        <img
+                            src="assets/images/map.png"
+                            alt="Africa map"
+                            class="contact__img"
+                        />
+                    </div>
+                    <div class="contact__form">
+                        <h2 class="contact__heading">
+                            Get a
+                            <span class="contact__heading--italic">free</span>
+                            consultation
+                        </h2>
+                        <form action="form-output.html" method="post">
+                            <label for="name">Your name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                placeholder="Dolores"
+                                required
+                            />
 
-							<label for="texarea">Your message</label>
-							<textarea
-								name="texarea"
-								id="textarea"
-								rows="2"
-								cols="30"
-								placeholder="Message"
-								required
-							></textarea>
+                            <label for="email">Your email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="address@email.com"
+                                required
+                            />
 
-							<p class="contact__terms">
-								By sending this form, you agree to
-								<a class="contact__terms--link" href=""
-									>Term of Use</a
-								>
-							</p>
-							<button
-								type="submit"
-								class="cta-button contact__cta-button"
-							>
-								<a href="" class="cta-link contact__cta-link"
-									>Send message</a
-								>
-								<img
-									class="cta-arrow"
-									src="assets/icons/arrow long.svg"
-									alt=""
-								/>
-							</button>
-						</form>
-					</div>
-				</div>
-			</section>
-		</main>
-		<footer class="footer">
-			<div class="footer__block container">
-				<div class="footer__logo-section">
-					<a href="">
-						<img
-							class="footer__logo"
-							src="/assets/images/Birago-logo.svg"
-							alt="Birago Logo"
-						/>
-					</a>
-					<p class="footer__usp">Travel designed for you</p>
-				</div>
-				<div class="footer__nav">
-					<div class="footer__company-section">
-						<h6 class="footer__heading">Company</h6>
-						<ul class="footer__nav--company">
-							<li>About Us</li>
-							<li>Contact Us</li>
-						</ul>
-					</div>
-					<div class="footer__services-section">
-						<h6 class="footer__heading">Services</h6>
-						<ul class="footer__nav--services">
-							<li>For locals</li>
-							<li>For travelers</li>
-						</ul>
-					</div>
-					<div class="footer__discover-section">
-						<h6 class="footer__heading">Discover Ghana</h6>
-						<ul class="footer__nav--blog">
-							<li>Video</li>
-							<li>Photo</li>
-							<li>Blog</li>
-						</ul>
-					</div>
+                            <label for="texarea">Your message</label>
+                            <textarea
+                                name="texarea"
+                                id="textarea"
+                                rows="2"
+                                cols="30"
+                                placeholder="Message"
+                                required
+                            ></textarea>
 
-					<div class="footer__social-section">
-						<h6 class="footer__heading">Follow us</h6>
-						<div class="footer__nav--social">
-							<img
-								class="footer__icon"
-								src="assets/icons/inst.svg"
-								alt=""
-							/>
-							<img
-								class="footer__icon footer__icon--fb"
-								src="assets/icons/fb.svg"
-								alt=""
-							/>
-							<img
-								class="footer__icon"
-								src="assets/icons/twitter.svg"
-								alt=""
-							/>
-						</div>
-					</div>
-				</div>
-			</div>
-			<hr />
-			<div class="footer__copyright container">
-				<p class="footer__copy">
-					&copy; 2022 Birago. All right reserved 2022
-				</p>
-				<div class="footer__policy">
-					<p>Terms of Use</p>
-					<p>Privacy Policy</p>
-				</div>
-			</div>
-		</footer>
-	</body>
+                            <p class="contact__terms">
+                                By sending this form, you agree to
+                                <a class="contact__terms--link" href=""
+                                    >Term of Use</a
+                                >
+                            </p>
+                            <button
+                                type="submit"
+                                class="cta-button contact__cta-button"
+                            >
+                                <a href="" class="cta-link contact__cta-link"
+                                    >Send message</a
+                                >
+                                <img
+                                    class="cta-arrow"
+                                    src="assets/icons/arrow long.svg"
+                                    alt=""
+                                />
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__block container">
+                <div class="footer__logo-section">
+                    <a href="">
+                        <img
+                            class="footer__logo"
+                            src="/assets/images/Birago-logo.svg"
+                            alt="Birago Logo"
+                        />
+                    </a>
+                    <p class="footer__usp">Travel designed for you</p>
+                </div>
+                <div class="footer__nav">
+                    <div class="footer__company-section">
+                        <h6 class="footer__heading">Company</h6>
+                        <ul class="footer__nav--company">
+                            <li>About Us</li>
+                            <li>Contact Us</li>
+                        </ul>
+                    </div>
+                    <div class="footer__services-section">
+                        <h6 class="footer__heading">Services</h6>
+                        <ul class="footer__nav--services">
+                            <li>For locals</li>
+                            <li>For travelers</li>
+                        </ul>
+                    </div>
+                    <div class="footer__discover-section">
+                        <h6 class="footer__heading">Discover Ghana</h6>
+                        <ul class="footer__nav--blog">
+                            <li>Video</li>
+                            <li>Photo</li>
+                            <li>Blog</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__social-section">
+                        <h6 class="footer__heading">Follow us</h6>
+                        <div class="footer__nav--social">
+                            <img
+                                class="footer__icon"
+                                src="assets/icons/inst.svg"
+                                alt=""
+                            />
+                            <img
+                                class="footer__icon footer__icon--fb"
+                                src="assets/icons/fb.svg"
+                                alt=""
+                            />
+                            <img
+                                class="footer__icon"
+                                src="assets/icons/twitter.svg"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="footer__copyright container">
+                <p class="footer__copy">
+                    &copy; 2022 Birago. All right reserved 2022
+                </p>
+                <div class="footer__policy">
+                    <p>Terms of Use</p>
+                    <p>Privacy Policy</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
 </html>

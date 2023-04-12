@@ -1,50 +1,174 @@
 .header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 40px;
-	margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 32px;
 
-	&__nav-list {
-		display: flex;
-		justify-content: space-evenly;
-		gap: 3.75rem;
+    &__nav-block {
+        transition: transform 0.8s ease-in-out;
+        transform: translateX(100%);
+    }
 
-		li {
-			flex-shrink: 0;
-		}
+    &__nav-block--green {
+        width: 60%;
+        max-width: 340px;
+        min-width: 320px;
+        background-color: $secondary-color;
+        z-index: 10;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
 
-		a {
-			display: inline-block;
+    &__nav-block--orange {
+        background-color: $primary-color;
+        width: 95%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transition-delay: 0.2s;
+    }
 
-			font: $body-S;
-			color: $dark-500;
-		}
-	}
+    &__nav-block--grey {
+        background-color: $grey-200;
+        width: 95%;
+        height: 100vh;
+        position: relative;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transition-delay: 0.4s;
+        padding: 80px;
+    }
 
-	&__button-block {
-		display: flex;
+    &__nav-btn--open {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 14px;
+        width: 20px;
+        cursor: pointer;
+    }
 
-		gap: 1rem;
-	}
-	&__button {
-		font: $button-S;
-		color: $dark-500;
-		background-color: transparent;
-		width: 136px;
-		height: 40px;
-		border-radius: 1000px;
-		border: 2px solid $primary-color;
-		cursor: pointer;
-		&:hover {
-			background-color: $primary-color;
-		}
+    &__nav-btn--close {
+        height: 14px;
+        width: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        position: fixed;
+        top: 55px;
+        right: 65px;
+    }
 
-		&--filled {
-			background-color: $primary-color;
-			&:hover {
-				background-color: transparent;
-			}
-		}
-	}
+    &__bar {
+        height: 2px;
+        width: 100%;
+        background-color: $dark-500;
+        border-radius: 100px;
+    }
+
+    &__nav-list {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 3.75rem;
+
+        li {
+            flex-shrink: 0;
+        }
+
+        a {
+            display: inline-block;
+
+            font: $body-S;
+            color: $dark-500;
+        }
+    }
+
+    &__button-block {
+        display: flex;
+
+        gap: 1rem;
+    }
+    &__button {
+        font: $button-S;
+        color: $dark-500;
+        background-color: transparent;
+        width: 136px;
+        height: 40px;
+        border-radius: 1000px;
+        border: 2px solid $primary-color;
+        cursor: pointer;
+        &:hover {
+            background-color: $primary-color;
+        }
+
+        &--filled {
+            background-color: $primary-color;
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+    @media (max-width: 1200px) {
+        &__nav,
+        &__button-block {
+            display: none;
+        }
+
+        &__nav--responsive,
+        &__button-block--responsive {
+            display: flex;
+        }
+
+        &__nav-list--responsive {
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+        }
+        &__button-block--responsive {
+            margin-top: 2rem;
+            margin-left: -10px;
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+
+    @media (min-width: 1201px) {
+        &__nav-btn,
+        &__bar,
+        &__nav-block--green,
+        .overlay {
+            display: none;
+        }
+    }
+}
+
+.visible {
+    transform: translateX(0);
+}
+
+.overlay {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 9;
+    opacity: 0.4;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.overlay.open {
+    visibility: visible;
 }
