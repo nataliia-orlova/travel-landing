@@ -88,6 +88,9 @@
 
             font: $body-S;
             color: $dark-500;
+            &:hover {
+                color: $primary-color;
+            }
         }
     }
 

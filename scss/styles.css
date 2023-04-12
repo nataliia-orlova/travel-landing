@@ -172,6 +172,9 @@ footer {
   font: 300 16px/24px "Prompt", sans-serif;
   color: #393738;
 }
+.header__nav-list a:hover {
+  color: #ff8607;
+}
 .header__button-block {
   display: flex;
   gap: 1rem;
@@ -990,9 +993,11 @@ footer {
   flex-direction: column;
   border: solid 1px;
   border-color: #e5e5e5;
+  transition: 0.3s ease-in-out;
 }
 .blog__card:hover {
   cursor: pointer;
+  background-color: #ff8607;
 }
 .blog__card--1 {
   border-radius: 20px 0px 0px 20px;
@@ -1191,6 +1196,13 @@ footer {
   letter-spacing: 0em;
   text-align: left;
   margin-bottom: 6px;
+  color: #393738;
+}
+.footer a {
+  color: #393738;
+}
+.footer a:hover {
+  color: #ff8607;
 }
 .footer__usp {
   font-family: Prompt;
@@ -1249,6 +1261,9 @@ footer {
 }
 .footer__icon + .footer__icon {
   margin-left: 15px;
+}
+.footer__icon {
+  cursor: pointer;
 }
 @media (max-width: 992px) {
   .footer .container {
